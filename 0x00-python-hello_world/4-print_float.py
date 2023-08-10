@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 123.456789
+number = 3.14159
 print(f"float: {number:.2f}")
