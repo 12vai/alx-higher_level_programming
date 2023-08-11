@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 
-a = 10
-b = 5
+def add(x, y):
+    return x + y
 
-import calculator_1 as calc
+def subtract(x, y):
+    return x - y
 
-result_add = calc.add(a, b)
-result_subtract = calc.subtract(a, b)
-result_multiply = calc.multiply(a, b)
-result_divide = calc.divide(a, b)
+def multiply(x, y):
+    return x * y
 
-print("Addition:", result_add)
-print("Subtraction:", result_subtract)
-print("Multiplication:", result_multiply)
-print("Division:", result_divide)
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Cannot divide by zero"
+
