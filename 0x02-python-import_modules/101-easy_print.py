@@ -1,2 +1,3 @@
-#1/usr/bin/python3
-import python_for_me
+#!/usr/bin/python3
+import builtins
+builtins.print("#pythoniscool")
