@@ -2,11 +2,11 @@
 
 if __name__ == "__main__":
     """print the addition of all arguments."""
-    total = 0
-    while True:
-        user_input = input("Enter a number (or 'end' to finish): ")
-        if user_input == "end":
-            break
-        total += int(user_input)
+    import sys
 
-    print(total)
+    total = 0
+    for i in range(len(sys.argv) - 1):
+        total += int(sys.argv[i + 1])
+
+    print("{}".format(total))  # Print the total after the loop
+
