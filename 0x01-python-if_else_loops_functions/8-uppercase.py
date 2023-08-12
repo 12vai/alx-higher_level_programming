@@ -5,6 +5,4 @@ def uppercase(str):
         uppercase_ascii = lowercase_ascii - 32 if 97 <= lowercase_ascii <= 122 else lowercase_ascii
         print("{:c}".format(uppercase_ascii), end='')
     print()
-
 uppercase("hello")
-
