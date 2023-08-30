@@ -1,18 +1,31 @@
 #!/usr/bin/python3
-
+"""Module providing class 'MagicClass' to replicate bytecode for Holberton"""
 import math
 
 class MagicClass:
+    """
+    Definition of a class to replicate the aforementioned bytecode
+    """
     def __init__(self, radius=0):
-        self._MagicClass__radius = 0
+        """
+        Instantiate a MagicClass object to represent a circle
+        """
+        self.__radius = 0  # Initialize radius to 0
 
-        if type(radius) is not int and type(radius) is not float:
+        # Check if radius is a valid number (int or float)
+        if not isinstance(radius, (int, float)):
             raise TypeError('radius must be a number')
 
-        self._MagicClass__radius = radius
+        self.__radius = radius  # Assign the provided radius
 
     def area(self):
-        return self._MagicClass__radius ** 2 * math.pi
+        """
+        Compute the area of a circle
+        """
+        return (self.__radius ** 2) * math.pi
 
     def circumference(self):
-        return 2 * math.pi * self._MagicClass__radius
+        """
+        Compute the circumference of a circle
+        """
+        return 2 * math.pi * self.__radius
