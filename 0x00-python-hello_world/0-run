@@ -1,2 +1,19 @@
 #!/bin/bash
-python3 $PYFILE
+
+# Check if the PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Full path to the Python interpreter
+PYTHON_EXECUTABLE=$(command -v python3)
+
+# Check if Python is installed
+if [ -z "$PYTHON_EXECUTABLE" ]; then
+    echo "Error: Python 3 is not installed."
+    exit 1
+fi
+
+# Run the Python script
+$PYTHON_EXECUTABLE "$PYFILE"
