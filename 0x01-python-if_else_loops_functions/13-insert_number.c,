@@ -1,0 +1,35 @@
+#include <stdlib.h>
+
+typedef struct listint_s {
+    int data;
+    struct listint_s *next;
+} listint_t;
+
+listint_t *insert_node(listint_t **head, int number) {
+    listint_t *new_node = (listint_t *)malloc(sizeof(listint_t));
+    if (!new_node) {
+        return NULL; // Memory allocation failed
+    }
+    new_node->data = number;
+    new_node->next = NULL;
+
+    if (*head == NULL || number < (*head)->data) {
+        // If the list is empty or the number is smaller than the first element,
+        // insert the new node at the beginning
+        new_node->next = *head;
+        *head = new_node;
+        return new_node;
+    }
+
+    // Traverse the list to find the appropriate position to insert the new node
+    listint_t *current = *head;
+    while (current->next != NULL && current->next->data < number) {
+        current = current->next;
+    }
+
+    // Insert the new node after the current node
+    new_node->next = current->next;
+    current->next = new_node;
+
+    return new_node;
+}
