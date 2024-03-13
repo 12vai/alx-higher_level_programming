@@ -1,3 +1,8 @@
 #!/bin/bash
 
-python3 $PYFILE
+PYFILE="path/to/your/python/script.py"
+
+if [ -f "$PYFILE" ];
+then
+    python3 "$PYFILE"
+fi

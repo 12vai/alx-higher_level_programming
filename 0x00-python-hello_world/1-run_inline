@@ -1,3 +1,5 @@
 #!/bin/bash
 
+PYCODE="print('Hello, world!')"  # Replace this with your actual Python code
+
 python3 -c "$PYCODE"
