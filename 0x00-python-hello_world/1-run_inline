@@ -1,3 +1,2 @@
 #!/bin/bash
-export PYCODE="print('Hello, world!')"
-./your_script.sh
+python3 -c "$PYCODE"

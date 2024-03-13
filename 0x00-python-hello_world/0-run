@@ -1,8 +1,2 @@
 #!/bin/bash
-
-PYFILE="path/to/your/python/script.py"
-
-if [ -f "$PYFILE" ];
-then
-    python3 "$PYFILE"
-fi
+python3 "$PYCODE"
